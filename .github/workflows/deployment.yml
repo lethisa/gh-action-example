@@ -4,8 +4,14 @@ on:
     branches: 
       - main
       - dev
-      
+    paths-ignore: 
+      - '.github/worflows/*'
+
   workflow_dispatch:
+    
+  pull_request: 
+    types:
+      - opened
 
 jobs:
   test:
